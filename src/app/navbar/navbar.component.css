@@ -1,0 +1,19 @@
+.navbar{
+    height: 100px;
+    padding-right: 200px;
+}
+
+ul li{
+    padding-left: 20px;
+}
+ul li:hover{
+    color: black;
+    font-size: bold;
+    cursor: pointer;
+}
+
+span{
+    padding-left: 50px;
+    color: black;
+    font-weight: bold;
+}
