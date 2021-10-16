@@ -4,8 +4,32 @@
 
 
 .background-img{
-    background-image:url(../contact/assets/bkk.jpg);
+    background: url(/assets/bkk.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
+    padding-top:20px;
 } 
+
+input{
+    outline: none;
+}
+
+h1{
+    padding: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 2px;
+    
+}
+
+.btn:hover{
+    background: transparent;
+    color: gray;
+}
