@@ -9,7 +9,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectComponent } from './project/project.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { UserService } from './_services/user.services';
+import {HttpClientModule} from "@angular/common/http"
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +18,18 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     AboutComponent,
     ContactComponent,
-    ProjectComponent
+    ProjectComponent,
+   
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule
+    HttpClientModule,
+    AppRoutingModule,
+  
   ],
-  providers: [],
+  providers: [{provide: "API_BASE_URL", useValue:"https://sq009portfolio.herokuapp.com/api/v1/"}, 
+  {provide:UserService, useClass:UserService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

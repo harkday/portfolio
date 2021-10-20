@@ -1,2 +1,23 @@
 <app-navbar-component></app-navbar-component>
 <router-outlet></router-outlet>
+
+<p>{{apiUrl1}}</p>
+<p>{{name}}</p>
+<button (click)="sendRequest()">get data from api</button>
+<div>First Name: {{userInfo?.firstName}}</div>
+<div>Last Name: {{userInfo?.lastName}}</div>
+<div>Email: {{userInfo?.email}}</div>
+<div>PhoneNumber: {{userInfo?.phoneNumber}}</div>
+<div>Address: {{userInfo?.address}}</div>
+
+<table>
+    <tr *ngFor="let work of userInfo?.workHistory">
+        <td>{{work.id}}</td>
+        <td>{{work.organization}}</td>
+        <td>{{work.position}}</td>
+        <td>{{work.startDate}}</td>
+        <td>{{work.endDate}}</td>
+        
+
+    </tr>
+</table>
